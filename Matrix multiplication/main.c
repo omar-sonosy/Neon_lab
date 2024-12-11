@@ -8,9 +8,13 @@
 
 void mat_product_c(float A[4][4], float B[4][4], float C[4][4])
 {	
+	//for loop to loop on rows
 	for (int i=0; i<4; i++){
+		//for loop to loop on columns
 		for(int j=0; j<4;j++){
+			//initializing each cell in output with zero
 			C[i][j]= 0;
+			//for loop to accumulate the value of the multiplication for each cell
 			for(int k=0;k<4;k++){
 				
 				C[i][j]+=A[i][k]*B[k][j];
