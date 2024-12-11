@@ -4,7 +4,7 @@ LDFLAGS=-mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -Wl,-build-id=none -specs=Xi
 LIBS=-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 
 
-all: neon.elf
+all: main.elf
 
 main.o: main.c
 	$(CC) $(CFLAGS) -O3 -o main.o main.c

@@ -7,10 +7,10 @@ LIBS=-Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 all: neon.elf
 
 main.o: main.c
-	$(CC) $(CFLAGS) -o main.o main.c
+	$(CC) $(CFLAGS) -O3 -o main.o main.c
 	
 neon.o: neon.c
-	$(CC) $(CFLAGS) -o neon.o neon.c
+	$(CC) $(CFLAGS) -O3 -o neon.o neon.c
 	
 platform.o: platform.c
 	$(CC) $(CFLAGS) -o platform.o platform.c
