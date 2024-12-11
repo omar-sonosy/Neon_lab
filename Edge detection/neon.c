@@ -61,7 +61,7 @@ int main()
 	
 	for (int i=0; i<10; i++){
 		for(int j=0; j<10;j++){
-			printf("%d  ",y[i][j]);
+			printf("%02x  ",y[i][j]);
 		}
 		printf("\n\r");
 	}

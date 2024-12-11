@@ -42,7 +42,9 @@ int main()
 	XTime_GetTime(&start);
 	sum= sum_ni(arr);
 	XTime_GetTime(&end);
-	printf("%llu \t %d\n\r",end-start, sum);
+	printf("Sum of array= %d\n\r",sum);
+	float time_ms= ((end-start)*2.0)*1000000/XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ;
+	printf("Time of summing array in C: %f micro_s\n\r",time_ms);
 	
     cleanup_platform();
     return 0;

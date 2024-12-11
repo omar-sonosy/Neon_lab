@@ -12,7 +12,7 @@ void edge(unsigned char arr[10][10], unsigned char arr2[10][10]){
 		for (int j=1; j<9; j++){
 			int G= abs(arr[i][j+1] - arr[i][j-1])+abs(arr[i+1][j]-arr[i-1][j]);
 			if (G >= 100){
-				arr2[i][j]= 1;
+				arr2[i][j]= 255;
 			}
 			else{
 				arr2[i][j]= 0;
@@ -50,7 +50,7 @@ int main()
 	
 	for (int i=0; i<10; i++){
 		for(int j=0; j<10;j++){
-			printf("%d  ",y[i][j]);
+			printf("%02x  ",y[i][j]);
 		}
 		printf("\n\r");
 	}
@@ -58,7 +58,7 @@ int main()
 	
 	XTime time_diff= end-start;
 	float time_ms= (time_diff*2.0)*1000000/XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ;
-	printf("%f micro_s\n\r",time_ms);
+	printf("Time is: %f  micro_s\n\r",time_ms);
 	
     cleanup_platform();
     return 0;

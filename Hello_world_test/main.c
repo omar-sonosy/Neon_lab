@@ -11,11 +11,10 @@ int main()
 	//double total_time;
     init_platform();
 	XTime_GetTime(&start);
-	int i;
-	for(i=0;i<10;i++)
-		print("Hello World\n\r");
+	print("Hello World\n\r");
 	XTime_GetTime(&end);
-	printf("%llu\n\r",end-start);
+	float time_ms= ((end-start)*2.0)*1000000/XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ;
+	printf("%f micro_s\n\r",time_ms);
 	
     cleanup_platform();
     return 0;
